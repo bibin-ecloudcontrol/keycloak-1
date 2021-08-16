@@ -1,8 +1,8 @@
 app:
     name: keycloak
     code: keycloak
-    notify: appzdev@cloudbourne.co
-
+    notify: bkoshy@ecloudcontrol.com 
+    
 build:
     version: 13.0
     env: DEV
@@ -11,7 +11,7 @@ build:
     image_template: keycloak-13.0
 
 deploy:
-    context: alpha/DEV
+    context: bibin-ecloudcontrol/DEV
     replicas: 1
     port:
     - 8080
@@ -21,7 +21,7 @@ properties:
     KEYCLOAK_PASSWORD:
       vault: KEYCLOAK_PASSWORD
     DB_VENDOR: postgres
-    DB_ADDR: postgres13-master-13-x
+    DB_ADDR: postgres-sonarqube-12-2 
     DB_DATABASE: keycloak
     DB_USER: keycloak
     DB_SCHEMA: public
